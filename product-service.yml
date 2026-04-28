@@ -1,6 +1,20 @@
 server:
   port: 8083
+
+spring:
+  datasource:
+    url: jdbc:mysql://capstone-db.cng4m02w2jrz.ap-southeast-2.rds.amazonaws.com:3306/capstone
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: admin
+    password: Vinni014291
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://172.31.27.189:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
